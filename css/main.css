@@ -1,0 +1,10 @@
+h1 {
+	text-align: center;
+}
+.tweet-container { 
+	border-style: solid;
+	border-width: 1px;
+	
+	margin: 0 auto;
+	padding: 30px 20px;
+}
