@@ -10,7 +10,7 @@ h1 {
 	padding: 20px 20px;
 }
 
-.row .tweet-list {
+div.tweet-list {
 	border-style: solid;
 	border-width: 1px;
 	border-color: rgb(205,205,205);
@@ -31,5 +31,8 @@ div.message {
 }
 
 div.show-more {
-	text-align: center;
+	border-style: solid;
+	border-width: 1px 1px 0 1px;
+	border-color: rgb(205,205,205);
+	display: none;
 }
