@@ -1,9 +1,26 @@
+var $body = $('.tweet-list');
 $(document).ready(function(){
-  //debugger;
-  var $body = $('.tweet-list');
   //$body.html('');    
   var index = streams.home.length - 1;
   debugger;
+  index = getNewTweets(index);
+  console.log(index);
+
+  var showMore = '<div class="tweet-container">' + '<button class="show-more">Show more</button>' + '</div>';
+  $(showMore).prependTo($body);
+  $('.show-more').on('click', function() {
+    getNewTweets(index);
+  })
+});
+
+
+function extractTime(rawTime) {
+  var rawTimeArray = rawTime.toString().split(' ');
+  return rawTimeArray[1] + ' ' + rawTimeArray[2] + ' ' + rawTimeArray[4];
+//   Thu Sep 17 2015 17:02:53 GMT-0400 (EDT)
+}
+
+function getNewTweets(index) {
   while(index >= 0){
     var tweet = streams.home[index];
     var user = '<span class="user"><strong>' + tweet.user + '</strong></span>';// need to insert a link for a modal for the user
@@ -19,12 +36,7 @@ $(document).ready(function(){
     
     $(tweetContainer).prependTo($body);
     index -= 1;
-  }  
-});
+  }
+  return streams.home.length - 1;
 
-
-function extractTime(rawTime) {
-  var rawTimeArray = rawTime.toString().split(' ');
-  return rawTimeArray[1] + ' ' + rawTimeArray[2] + ' ' + rawTimeArray[4];
-//   Thu Sep 17 2015 17:02:53 GMT-0400 (EDT)
-}
+} 
