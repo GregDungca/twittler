@@ -35,4 +35,10 @@ div.show-more {
 	border-width: 1px 1px 0 1px;
 	border-color: rgb(205,205,205);
 	display: none;
+	padding: 7px 7px;
+}
+
+button.show-more {
+	margin: 0 auto;
+	display: block;
 }
