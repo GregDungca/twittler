@@ -10,7 +10,7 @@ $(document).ready(function(){
 
   $m.find('a.show-more').on('click', function(event) {
     event.preventDefault();
-    $m.find('div.show-more').hide();//optionally animate this
+    $m.find('div.show-more').slideUp();//optionally animate this
     getNewTweets();
   });
 
@@ -27,7 +27,7 @@ $(document).ready(function(){
 
     $um.find('a.show-more').on('click', function(event) {
       event.preventDefault();
-      $um.find('div.show-more').hide();//optionally animate this
+      $um.find('div.show-more').slideUp();//optionally animate this
       getNewUserTweets();
     });
 
@@ -54,7 +54,7 @@ $(document).ready(function(){
         if (uIndex2 > uIndex1) {
           var numNewTweets = uIndex2 - uIndex1;
           if ($um.find('div.show-more').css('display') === 'none') {
-            $um.find('div.show-more').show();
+            $um.find('div.show-more').slideDown();
           }
           $um.find('#num-new-tweets').text(numNewTweets);
         }
@@ -88,7 +88,7 @@ function checkNewTweets() {
   if (index2 > index1) {
     var numNewTweets = index2 - index1;
     if ($m.find('div.show-more').css('display') === 'none') {
-      $m.find('div.show-more').show();
+      $m.find('div.show-more').slideDown();
     }
     $m.find('#num-new-tweets').text(numNewTweets);
   }
