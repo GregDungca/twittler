@@ -13,7 +13,7 @@ $(document).ready(function(){
     getNewTweets();
   });
 
-  $('.user').on('click', function(event) {
+  $('.tweet-list').on('click', '.user', function(event) {
     var $um = $('#user-modal');
     event.preventDefault();
     $um.modal();
