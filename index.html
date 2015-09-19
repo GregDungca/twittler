@@ -9,13 +9,13 @@
     <title>twittler</title>
   </head>
   <body>
-    <div class='container-fluid'>
+    <div class='container-fluid main'>
       <h1>twittler</h1>
       <div class='row'>
         <div class='col-md-3'></div>
         <div class='col-md-6'>
           <div class='show-more'>
-            <button class='show-more'>Show more tweets (<span id='num-new-tweets'></span>)</button>
+            <button class='show-more btn-default'>Show more tweets (<span id='num-new-tweets'></span>)</button>
           </div>
           <div class='tweet-list'>
           </div>
@@ -29,27 +29,22 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title">Modal title</h4>
+          <h4 class="modal-title"></h4>
         </div>
         <div class="modal-body">
           <div class='container-fluid'>
-            <h1>insert user name</h1>
             <div class='row'>
               <div class='col-md-3'></div>
               <div class='col-md-6'>
                 <div class='show-more'>
-                  <button class='user-show-more'>Show more tweets (<span id='num-new-user-tweets'></span>)</button>
+                  <button class='show-more btn-default'>Show more tweets (<span id='num-new-tweets'></span>)</button>
                 </div>
-                <div class='user-tweet-list'>
+                <div class='tweet-list'>
                 </div>
               </div>
               <div class='col-md-3'></div>
             </div>
           </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->

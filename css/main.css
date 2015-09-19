@@ -20,6 +20,7 @@ div.tweet-list {
 
 span.user {
 	font-style: bold;
+	color: #337ab7;
 }
 
 span.message-time {
@@ -41,4 +42,9 @@ div.show-more {
 button.show-more {
 	margin: 0 auto;
 	display: block;
+}
+
+#user-modal .modal-header {
+	text-align: center;
+	border-bottom: hidden;
 }
