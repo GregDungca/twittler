@@ -5,7 +5,7 @@ $(document).ready(function(){
   index2 = streams.home.length;
   getNewTweets();
 
-  setInterval(checkNewTweets, 10000);
+  setInterval(checkNewTweets, 5000);
 
 
   $m.find('a.show-more').on('click', function(event) {
@@ -23,7 +23,7 @@ $(document).ready(function(){
     var uIndex2 = streams.users[userName].length;
     $um.find('.modal-title').text(userName);
     getNewUserTweets();
-    var intervalCheck = setInterval(checkNewUserTweets, 10000);
+    var intervalCheck = setInterval(checkNewUserTweets, 5000);
 
     $um.find('a.show-more').on('click', function(event) {
       event.preventDefault();
