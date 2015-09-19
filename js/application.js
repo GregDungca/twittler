@@ -8,7 +8,8 @@ $(document).ready(function(){
   setInterval(checkNewTweets, 10000);
 
 
-  $m.find('button.show-more').on('click', function() {
+  $m.find('a.show-more').on('click', function(event) {
+    event.preventDefault();
     $m.find('div.show-more').hide();//optionally animate this
     getNewTweets();
   });
@@ -24,7 +25,8 @@ $(document).ready(function(){
     getNewUserTweets();
     var intervalCheck = setInterval(checkNewUserTweets, 10000);
 
-    $um.find('button.show-more').on('click', function() {
+    $um.find('a.show-more').on('click', function(event) {
+      event.preventDefault();
       $um.find('div.show-more').hide();//optionally animate this
       getNewUserTweets();
     });
