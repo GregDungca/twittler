@@ -2,7 +2,7 @@ var $m = $('.main');
 var index1, index2;
 $(document).ready(function(){ 
   index1 = 0;
-  index2 = streams.home.length - 1;
+  index2 = streams.home.length;
   getNewTweets();
 
   setInterval(checkNewTweets, 10000);
@@ -19,7 +19,7 @@ $(document).ready(function(){
     $um.modal();
     var userName = $(this).find('a').data('user');
     var uIndex1 = 0;
-    var uIndex2 = streams.users[userName].length - 1;
+    var uIndex2 = streams.users[userName].length;
     $um.find('.modal-title').text(userName);
     getNewUserTweets();
     var intervalCheck = setInterval(checkNewUserTweets, 10000);
@@ -36,7 +36,7 @@ $(document).ready(function(){
     });
 
     function getNewUserTweets() {
-      for ( var i = uIndex1; i <= uIndex2; i ++ ) {
+      for ( var i = uIndex1; i < uIndex2; i ++ ) {
         var tweet = streams.users[userName][i];
         var user = '<span class="user">' + tweet.user + '</span>';
         var messageTime = '<span class="message-time">' + extractTime(tweet.created_at) + '</span>';
@@ -48,7 +48,7 @@ $(document).ready(function(){
     }
 
     function checkNewUserTweets() {
-        uIndex2 = streams.users[userName].length - 1;
+        uIndex2 = streams.users[userName].length;
         if (uIndex2 > uIndex1) {
           var numNewTweets = uIndex2 - uIndex1;
           if ($um.find('div.show-more').css('display') === 'none') {
@@ -70,7 +70,7 @@ function extractTime(rawTime) {
 }
 
 function getNewTweets() {
-  for ( var i = index1; i <= index2; i ++ ) {
+  for ( var i = index1; i < index2; i ++ ) {
     var tweet = streams.home[i];
     var user = '<span class="user"><a href="#" data-user="' + tweet.user + '"">' + tweet.user + '</a></span>';
     var messageTime = '<span class="message-time">' + extractTime(tweet.created_at) + '</span>';
@@ -82,7 +82,7 @@ function getNewTweets() {
 } 
 
 function checkNewTweets() {
-  index2 = streams.home.length - 1;
+  index2 = streams.home.length;
   if (index2 > index1) {
     var numNewTweets = index2 - index1;
     if ($m.find('div.show-more').css('display') === 'none') {
