@@ -15,7 +15,6 @@ div.tweet-list {
 	border-width: 1px;
 	border-color: rgb(205,205,205);
 	padding: 0 0;
-	/*margin: 120px 120px;*/
 }
 
 span.user {
@@ -25,10 +24,6 @@ span.user {
 
 span.message-time {
 	color: rgb(205,205,205);
-}
-
-div.message {
-
 }
 
 div.show-more {

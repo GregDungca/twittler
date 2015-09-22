@@ -32,7 +32,6 @@ $(document).ready(function(){
     });
 
     $um.on('hide.bs.modal', function() {
-      console.log('Model is hidden');
       clearInterval(intervalCheck);
       $um.find('.tweet-list').html('');
     });
